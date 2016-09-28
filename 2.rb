@@ -1071,3 +1071,20 @@ p "PART 9.2.3", "PAGE 382"
 puts
 
 p "ruby123"[/\d+/]
+p "ruby123"[/([a-z]+)(\d+)/,1]
+p "ruby123"[/([a-z]+)(\d+)/,2]
+
+s = "one, two, three"
+p s.split
+p s.split(", ")
+p s.split(/\s*,\s*/)
+text = "hello world"
+pat = /l/
+p first = text.index(pat)
+p n = Regexp.last_match.end(0)
+p second = text.index(pat, n)
+p last = text.rindex(pat)
+
+puts
+p "PART 9.2.4.3", "PAGE 382" #Фдэнаган, Мацумото "Язык программирования Ruby"
+puts
