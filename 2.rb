@@ -1086,5 +1086,38 @@ p second = text.index(pat, n)
 p last = text.rindex(pat)
 
 puts
-p "PART 9.2.4.3", "PAGE 382" #Фдэнаган, Мацумото "Язык программирования Ruby"
+p "PART 9.2.4.3", "PAGE 382" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
+
+phone = "8^900%888%88-88" #ss
+puts phone.gsub!(/\D/,"")
+puts phone.gsub!("8","9")
+
+txt = "Ruby Java perl PyThOn"
+lang = /ruby|java|perl|python/i
+puts txt.gsub!(lang) {|i| i.capitalize}
+
+puts
+p "PART 9.3", "PAGE 385" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+p 0.zero?
+p 1.0.zero?
+p 0.0.nonzero? # nil = false
+p 1.nonzero? # 1 = true
+p 1.integer?
+#p 1.0.scalar? не заработало
+
+p 0.even?
+p 0.odd?
+
+ZERO, INF, NAN = 0.0, 1.0/0.0, 0.0/0.0
+p ZERO.finite?
+p INF.finite?
+p NAN.finite?
+p ZERO.infinite?
+p INF.infinite?
+#p -INF.infinite?
+p ZERO.nan?
+p INF.nan?
+p NAN.nan?
