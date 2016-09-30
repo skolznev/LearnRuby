@@ -1117,7 +1117,58 @@ p INF.finite?
 p NAN.finite?
 p ZERO.infinite?
 p INF.infinite?
-#p -INF.infinite?
+a = -INF.infinite?
+p a
 p ZERO.nan?
 p INF.nan?
 p NAN.nan?
+
+p 1.1.ceil
+p 1.9.floor
+p 1.1.round
+p 1.1.truncate
+a = -2.0.abs
+p a
+
+puts
+p "PART 9.3.2", "PAGE 386" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+p Math::PI
+p Math::E
+p Math.sqrt(25.0)
+p 27.0**(1.0/3.0)
+
+puts
+p "PART 9.3.3 PAGE 386" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+require 'bigdecimal'
+
+p dime = BigDecimal("0.1")
+p 4*dime - 3*dime == dime
+
+puts
+p "PART 9.3.4 PAGE 388" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+#require 'complex'
+#require 'rational'
+#require 'matrix'
+
+puts
+p "PART 9.3.7 PAGE 390" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+p rand
+p rand
+p rand(100)
+p rand(100)
+srand(0)
+p a = [rand(100), rand(100)]
+srand(0)
+p b = [rand(100), rand(100)]
+
+puts
+p "PART 9.4 PAGE 390" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
