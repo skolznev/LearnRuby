@@ -1172,3 +1172,50 @@ p b = [rand(100), rand(100)]
 puts
 p "PART 9.4 PAGE 390" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
+
+p Time.now
+p Time.new
+p Time.local(2007,7,8)
+p Time.utc(2007,7,8,9,10)
+p Time.gm(2007,7,8,9,10,11)
+
+t = Time.utc(2000,12,31,23,59,59,999999)
+p t
+p t.year
+p t.month
+p t.day
+p t.wday #день недели, 0 - вс
+p t.yday #високосный
+p t.hour
+p t.min
+p t.sec
+p t.usec
+p t.zone
+
+p values = t.to_a
+p values[5] += 1
+p Time.utc(*values)
+
+p t.utc?
+p t.sunday?
+p t.monday?
+
+p t.to_s
+p t.ctime
+p t.strftime("%Y-%m-%d %H:%M:%S")
+
+puts
+
+#require 'parsedate' старые данные, нет такой библиотеки
+#include ParseDate
+
+#datestring = "2001-01-01"
+#p values = parsedate(datestring)
+
+p now = Time.now
+p past = now - 10
+p future = now + 10
+p future - now
+
+
+
