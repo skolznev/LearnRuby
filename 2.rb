@@ -1217,5 +1217,40 @@ p past = now - 10
 p future = now + 10
 p future - now
 
+p past <=> future
+p past < future
+p past >= future
+p past == now
 
+p t = Time.now.to_i
+p Time.at(t)
+p t - Time.now.to_f
+p Time.at(0)
 
+puts
+p "PART 9.5 PAGE 393" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+p (5..7).each {|x| print x}
+p (5..7).each_with_index {|x,i| print x, i}
+#require "enumerator"
+p (1..10).each_slice(4) {|x| print x}
+p (1..5).each_cons(3) {|x| print x }
+puts
+data = [1,2,3,4]
+p roots = data.collect {|x| Math.sqrt(x)}
+puts 
+words = %w[hello world]
+p upper = words.map {|x| x.upcase}
+puts
+p (1..3).zip([4,5,6]) {|x| print x.inspect}
+p (1..3).zip([4,5,6],[7,8]) {|x| print x}
+p (1..3).zip('a'..'c') {|x,y| print x,y }
+puts
+p (1..3).to_a
+require 'set'
+p (1..3).to_set
+
+puts
+p "PART 9.5.1.2 PAGE 395" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
