@@ -1254,3 +1254,43 @@ p (1..3).to_set
 puts
 p "PART 9.5.1.2 PAGE 395" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
+
+p e = [1..10].to_enum
+p e = "test".enum_for(:each_byte)
+p "Ruby".each_char.max
+
+p w = Set['apple','Beet','cerrot']
+p w.sort
+p w.sort {|a,b| b<=>a}
+p w.sort {|a,b| a.casecmp(b)}
+p w.sort_by {|x| x.downcase}
+
+puts 
+
+primes = Set[2,3,4,5]
+p primes.include? 2
+p primes.member? 1
+
+data = [[1,2],[0,1],[7,8]]
+p data.find {|x| x.include? 1}
+p data.detect {|x| x.include? 3}
+p data.find_index {|x| x.include? 1}
+
+puts
+
+p e = (1..8).select {|x| x%2==0}
+p e = (1..8).find_all {|x| x%2==1}
+p e = [2,3,5,7].reject {|x| x%2==0}
+p e = (1..8).partition {|x| x%2==0}
+
+puts
+
+langs = %w[ java perl python ruby]
+p g = langs.group_by {|l| l[0]}
+
+p langs.grep(/^p/)
+p langs.grep(/^p/) {|x| x.capitalize}
+
+puts
+p "PART 9.5.1.6 PAGE 399" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
