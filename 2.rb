@@ -1294,3 +1294,33 @@ p langs.grep(/^p/) {|x| x.capitalize}
 puts
 p "PART 9.5.1.6 PAGE 399" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
+
+p e = [10,100,1].min
+p e = [10,100,1].max 
+#p e = [10,100,1,[]].min
+langs = %w[ java perl python ruby]
+p langs.max {|a,b| a.size <=> b.size}
+p langs.max_by {|w| w.length}
+
+p e = (1..100).minmax
+p e = (1..100).minmax_by {|n| n.to_s}
+
+c = -2..2
+p c.all? {|x| x>0}
+p c.any? {|x| x>0}
+p c.none? {|x| x>2}
+p c.one? {|x| x>0}
+p c.one? {|x| x>2}
+p c.one? {|x| x==2}
+p e = [1,2,3].all?
+p e = [nil,false].any?
+p e = [].none?
+
+a = [1,1,2,3,5,8]
+p a.count(1)
+p a.count {|x| x%2 == 1}
+
+puts
+p "PART 9.5.2 PAGE 401" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
