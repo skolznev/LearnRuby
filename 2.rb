@@ -1324,3 +1324,44 @@ puts
 p "PART 9.5.2 PAGE 401" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+p nils = Array.new(3)
+p copy = Array.new(nils)
+p zero = Array.new(4, 0)
+p Array.new(3) {|i| i+1}
+p a = Array.new(3, 'a')
+p a[0].upcase!
+p a = Array.new(3) {'b'}
+p a[0].upcase!
+p a
+
+puts
+
+p a = [1,2,3].length
+p a = [].size
+p a = [].empty?
+#p a = [1,2,nil].nitems метод не работает
+#p a = [1,2,3].nitems {|x| x>2}
+
+a = %w[ a b c d ]
+p a[0]
+p a[-1]
+p a[a.size-1]
+p a[-a.size-1]
+p a[5]
+p a.at(2)
+p a.fetch(1)
+p a.fetch(5, "Exit of array")
+p a.first
+p a.last
+#p a.choice
+p a[0,2]
+p a[0..2]
+p a[0...2]
+
+p a.values_at(0,2)
+p a.values_at(4,3,2,1)
+
+puts
+p "PART 9.5.2.3 PAGE 403" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
