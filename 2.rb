@@ -1365,3 +1365,56 @@ puts
 p "PART 9.5.2.3 PAGE 403" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+a = [1,2,3]
+
+a[0]=0; p a
+a[-1] = 4; p a
+a[1] = nil; p a
+
+a = [1,2,3]
+
+a[3] = 4; p a
+a[5] = 6; p a
+a << 7; p a
+a << 8 << 9; p a
+
+a = [1,2,3]
+
+p a + a
+p a.concat([4,5])
+
+a = ['a', 'b', 'c']
+p a.insert(1,1,2)
+
+a = [1,2,3,4,5,6]
+p a.delete_at(4); p a
+p a.delete_at(-1); p a
+p a.delete(4); p a
+a[1] = 1; p a
+p a.delete(1); p a
+
+a = [1,2,3]
+p a.delete_if {|i| i%2==1}
+p a.reject! {|i| i%2==0}
+
+a = [1,2,3,4,5,6,7,8]
+p a.slice!(0); p a
+p a.slice!(-1,1); p a
+p a.slice!(2..3); p a
+p a.slice!(4,2); p a
+
+puts
+
+a = ('a'..'e').to_a; p a
+a[0,2] = ['A','B']; p a
+a[2...5]=['C','D','E']; p a
+a[0,0] = [1,2,3]; p a
+a[0..2] = []; p a
+p a.clear
+
+puts
+p "PART 9.5.2.4 PAGE 404" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+
+
