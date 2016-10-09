@@ -1416,5 +1416,94 @@ puts
 p "PART 9.5.2.4 PAGE 404" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+a = ['a', 'b', 'c']
+a.each {|i| print i}
+a.reverse_each {|i| print i}
+#a.cycle {|i| print i} #uups
+a.each_index {|i| print i}
+p a.map {|i| i.upcase}
 
+puts
+
+a = %w[h e l l o]
+
+p a.include?('e')
+p a.include?('w')
+p a.index('l')
+p a.index('L')
+p a.rindex('l')
+p a.index {|i| i =~ /[aeiou]/}
+
+p a.sort
+p a.sort!
+
+p a.shuffle!
+
+puts
+p "PART 9.5.2.5 PAGE 405" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+a1 = [1,2]
+a2 = []
+p a1 <=> a2
+
+puts
+p "PART 9.5.2.6 PAGE 406" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+a =[]
+p a.push(1)
+p a.push(2,3)
+p a.pop; p a
+
+a = []
+p a.push(1)
+p a.push(2)
+p a.shift; p a
+
+puts
+p "PART 9.5.2.7 PAGE 406" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+a1 = [1, 1,3,5]
+a2 = [1,2,3]
+p a1 - a2
+
+small = (0..10).to_a
+p small
+p even = (0..50).map {|i| i*2}
+p smalleven = small & even
+p smalleven.include?(8)
+
+p a = [1,1,nil,nil].uniq
+
+puts
+p "PART 9.5.2.8 PAGE 407" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+h = { :a => 1, :b => 2}
+p h
+p a= h.to_a
+p a.assoc(:a)
+p a.assoc(:b).last
+p a.transpose
+
+puts
+p "PART 9.5.2.8 PAGE 408" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+p a = [1,2,3].join
+p a = [1,2,3].join(", ")
+p a = [1,2,3].to_s
+
+p a = [1,2,3,4].pack("CCCC")
+
+p a = [0,1]*3
+p a = [1, [2, [3]]].flatten
+p a = [1,2,3].zip([:a, :b, :c])
+p a.transpose
+
+puts
+p "PART 9.5.3 PAGE 408" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
 
