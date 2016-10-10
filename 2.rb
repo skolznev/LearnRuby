@@ -1507,3 +1507,52 @@ puts
 p "PART 9.5.3 PAGE 408" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+puts :a=>1, :b=>2
+puts a:1, b:2
+
+h = {:one => 1, :two => 2}
+p h[:one]
+p h[:three]
+p h.assoc :one
+
+p h.index 1
+p h.index 4
+p h.rassoc 2
+
+h = {:a => 1, :b => 2}
+
+p h.key?(:a)
+p h.has_key?(:b)
+
+p h.include?(:c)
+p h.member?(:d)
+
+p h.value?(1)
+
+p h.fetch(:a)
+#p h.fetch(:c)
+p h.fetch(:c, 33)
+p h.fetch(:c) {|i| i.to_s}
+
+h = {:a => 1, :b => 2, :c => 3}
+
+p h.values_at(:c)
+p h.values_at(:c, :b)
+p h.values_at(:c, :b, :d, :d)
+
+puts
+
+h = {}
+
+h[:a] = 1; p h
+h.store(:b,2); p h
+
+h.replace({1=>:a, 2=>:b}); p h
+
+puts
+p "PART 9.5.3.4 PAGE 411" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+
+
+
