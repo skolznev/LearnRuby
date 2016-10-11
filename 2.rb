@@ -1553,6 +1553,34 @@ puts
 p "PART 9.5.3.4 PAGE 411" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+h = {:a=>1, :b=>2}
+p h[:a] = nil; p h
+p h.include? :a
+p h.delete :b; p h
+# p h.delete(:b) {|i| raise IndexError, i.to_s}
 
+h = {:a=>1, :b=>2, :c=>3, :d=>"four"}
+p h.reject! {|k,v| v.is_a? String}
+p h.delete_if {|k,v| k.to_s < 'b'}
+p h.reject! {|k,v| k.to_s < 'b'}
+p h.clear
+
+h = {:a=>1, :b=>2, :c=>3}
+hh = {}
+p h.length
+p h.size
+p h.empty?
+p hh.empty?
+
+p h.keys
+p h.values
+p h.to_a
+p h.flatten
+p h.sort
+p h.sort {|a,b| a[1]<=>b[1]}
+
+puts
+p "PART 9.5.3.6 PAGE 412" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
 
 
