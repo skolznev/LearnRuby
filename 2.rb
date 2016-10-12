@@ -1583,4 +1583,56 @@ puts
 p "PART 9.5.3.6 PAGE 412" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+h = {:a=>1, :b=>2, :c=>3}
 
+h.each {|i| print i}
+
+puts
+
+h.each do |k,v|
+	print "#{k}:#{v} "
+end
+puts
+h.each_key {|k| print k}
+puts
+h.each_value {|v| print v }
+puts
+h.each_pair {|k,v| print k,v }
+
+puts
+print h.shift[1] while not h.empty?
+
+puts
+
+empty = {}
+p empty["one"]
+
+empty = Hash.new(-1)
+p empty["one"]
+p empty.default
+
+fact = Hash.new {|h,k| h[k] = if k > 1; k*h[k-1] else 1 end}
+p fact
+p fact[4]
+p fact
+
+puts
+
+key = {:a=>1}
+h = { key => 2 }
+p h[key]
+key.clear
+p h[key]
+h.rehash; p h[key]
+
+puts
+
+h = {:a=>1, :b=>2, :c=>3}
+
+p h.invert
+p h.to_s
+p h.inspect
+
+puts
+p "PART 9.5.4 PAGE 414" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
