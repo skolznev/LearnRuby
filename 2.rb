@@ -1636,3 +1636,37 @@ p h.inspect
 puts
 p "PART 9.5.4 PAGE 414" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
+
+#require 'set'
+s = (1..5).to_set
+p s
+s = [1,2,3,].to_set; p s
+
+p Set.new(1..5)
+p Set.new([1,2,3]) {|i| i+1}
+
+s = Set.new(1..3); p s
+p s.include? 1
+p s.member? 0
+
+s = Set[2,3,5]
+t = Set[2,3,5,7]
+p s.subset? t
+p t.subset? s
+
+p s.length; p s.size
+p s.empty?
+
+p s & t
+p s | t
+p s - t
+p s ^ t
+
+puts
+p "PART 9.5.4.3 PAGE 417" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+
+
+
+
