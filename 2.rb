@@ -1666,6 +1666,45 @@ puts
 p "PART 9.5.4.3 PAGE 417" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+s = Set[]; p s
+s << 1; p s
+s.add 2; p s
+s << 3 << 4 << 5; p s
+p s.add? 6
+
+s = (1..3).to_set; p s
+s.merge(2..5); p s
+
+p s.delete 5
+
+p s.subtract(2..10)
+
+s = Set[2,3,4,5,7]
+p s.delete_if {|i| i%2==1}
+p s.clear
+p s.empty?
+
+s = Set[1,2,3,4,5]
+s.each {|i| print i}
+puts
+p s.map! {|i| i*i}
+p s.collect! {|i| i/2}
+
+p s = (1..3).to_set
+p s.to_a
+p s.to_s
+p s.inspect
+p s == Set[3,2,1,0]
+
+s = (0..3).to_set
+p s.classify {|i| i%2}
+p s.divide {|i| i%2}
+
+puts
+p "PART 9.6 PAGE 419" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+
 
 
 
