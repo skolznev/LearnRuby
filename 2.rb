@@ -1704,8 +1704,38 @@ puts
 p "PART 9.6 PAGE 419" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+full = 'C:\Users\User\Google Диск\my programming\ruby\tests\test\file.rb'
+p file = File.basename(full)
+p File.basename(full, '.rb')
+p dir = File.dirname(full)
+p File.dirname(file)
+p File.split(full)
+p File.extname(full)
+p File.join('ruby','tests')
 
+puts
 
+p Dir.chdir("/Users/User")
+p File.expand_path("ruby")
+p File.expand_path("~/ruby")
+
+puts
+
+p File.identical?("ruby", "ruby")
+
+puts
+
+p File.fnmatch("*.rb","hello.rb")
+p File.fnmatch("*.[ch]","ruby.h")
+p File.fnmatch("?.txt", "b.txt")
+flags = File::FNM_PATHNAME | File::FNM_DOTMATCH
+p File.fnmatch("lib/*.rb", "lib/a.rb", flags)
+p File.fnmatch("lib/*.rb", "lib/b/a.rb", flags)
+p File.fnmatch("lib/**/*.rb", "lib/b/s/a.rb", flags)
+
+puts
+p "PART 9.6.2 PAGE 422" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
 
 
 
