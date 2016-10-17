@@ -1737,5 +1737,20 @@ puts
 p "PART 9.6.2 PAGE 422" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+way = 'C:\Users\User\Google Диск\my programming\ruby\tests'
+p filename = Dir.entries(way)
+Dir.foreach(way) {|i| print i}
 
+puts
 
+p Dir["*.rb"]
+
+puts Dir.getwd
+Dir.chdir("..")
+puts Dir.getwd
+Dir.chdir("..")
+puts Dir.pwd
+
+puts
+p "PART 9.6.3 PAGE 423" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
