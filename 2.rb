@@ -1754,3 +1754,43 @@ puts Dir.pwd
 puts
 p "PART 9.6.3 PAGE 423" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
+
+p File.exist?(way)
+p File.file?(full)
+p File.directory?(way)
+p File.symlink?(full)
+
+p File.size(full)
+p File.size(way)
+p File.size?(full)
+p File.zero?(full)
+p File.zero?(way)
+
+p File.readable?(full)
+p File.world_readable?(full)
+p File.world_writable?(full)
+
+p File.mtime(full)
+p File.atime(full)
+
+p File.ftype(full)
+p File.ftype(way)
+
+p s = File.stat(full)
+p s.file?
+p s.directory?
+p s.ftype
+p s.readable?
+p s.writable?
+p s.executable?
+p s.size
+p s.atime
+
+puts
+p "PART 9.7 PAGE 426" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+
+
+
+
