@@ -1790,7 +1790,13 @@ puts
 p "PART 9.7 PAGE 426" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+path = "C:/Users/User/Google Диск/my programming/ruby/tests/test/t.txt"
+File.open(path, "a") do |log|
+	log.puts("INFO: Logging a message")
+end
 
-
+puts
+p "PART 9.7.1.2 PAGE 428" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
 
 
