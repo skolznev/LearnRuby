@@ -1799,4 +1799,19 @@ puts
 p "PART 9.7.1.2 PAGE 428" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+#p uptime = open("|uptime") {|f| f.gets}
+#require "open-uri"
+#f = open("https://github.com/")
+#webpage = f.read
+#f.close
+
+require "stringio"
+input = StringIO.open("flawless victory")
+buffer = ""
+output = StringIO.open(buffer, "w")
+
+puts
+p "PART 9.7.3 PAGE 431" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
 
