@@ -1814,4 +1814,16 @@ puts
 p "PART 9.7.3 PAGE 431" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+path = "C:/Users/User/Google Диск/my programming/ruby/tests/test/t.txt"
+
+p data = IO.read(path) # Никаких кавычек в названии переменной!
+p words = IO.readlines(path, nil, 6)
+words = {}
+IO.foreach(path) {|w| words[w] = true}
+p words
+
+puts
+p "PART 9.7.3.3 PAGE 433" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
 
