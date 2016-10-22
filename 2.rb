@@ -1826,4 +1826,42 @@ puts
 p "PART 9.7.3.3 PAGE 433" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+f = File.open(path, "r:binary")
+c = f.getc; p c
+p f.ungetc(c)
+p c = f.readchar
+
+puts 
+
+o = STDOUT
+
+p o.putc(65)
+p o.putc("B")
+p o.putc("CD")
+
+puts
+
+f = File.open(path)
+p f.pos
+p f.pos = 10
+p f.tell
+p f.rewind
+p f.seek(10, IO::SEEK_SET)
+p f.seek(10, IO::SEEK_CUR)
+p f.seek(0, IO::SEEK_END)
+p f.eof?
+
+puts
+
+File.open(path) do |f|
+	#code
+	p f.closed?
+end
+
+puts
+p "PART 9.8 PAGE 433" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
+
+
 
