@@ -1859,9 +1859,53 @@ File.open(path) do |f|
 end
 
 puts
-p "PART 9.8 PAGE 433" #Флэнаган, Мацумото "Язык программирования Ruby"
+p "PART 9.8 PAGE 439" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+require 'socket'
 
+#host, port = ARGV
+#s = TCPSocket.open(host, port)
+#while line = s.gets
+#	puts line.chop
+#end
+#s.close
 
+#server = TCPServer.open(2000)
+#loop {
+#	client = server.accept
+#	client.puts(Time.now.ctime)
+#	client.close
+#}
+
+host = 'www.virtualsoccer.ru'
+port = 80
+path = "/index.html"
+request = "GET #{path} HTTP/1.0\r\n\r\n"
+socket = TCPSocket.open(host, port)
+socket.print(request)
+response = socket.read
+headers, body = response.split("\r\n\r\n", 2)
+print body
+
+puts
+
+require 'net/http'
+
+http = Net::HTTP.new(host)
+headers, body = http.get(path)
+if headers.code == "200"
+	print body
+else
+	puts "#{headers.code} #{headers.message}"
+end
+
+puts
+
+require 'open-uri'
+open("http://www.virtualsoccer.ru/index.html") {|i| puts i.read}
+
+puts
+p "PART 9.9 PAGE 446" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
 
