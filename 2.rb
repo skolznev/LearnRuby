@@ -1920,5 +1920,58 @@ puts
 1.upto(3) {|i| Thread.new {puts i}}
 
 puts
-p "PART 9.9 PAGE 451" #Флэнаган, Мацумото "Язык программирования Ruby"
+p "PART 9.9.3 PAGE 451" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
+
+def conread(filenames)
+	h = {}
+	filenames.each do |filename|
+		h[filename] = Thread.new do
+			open(filename) {|f| f.read}
+		end
+	end
+
+	h.each_pair do |filename, thread|
+		begin
+			h[filename] = thread.value
+		rescue
+			h[filename] = $!
+		end
+	end
+end
+
+path1 = "C:/Users/User/Google Диск/my programming/ruby/tests/test/t.txt"
+path2 = "C:/Users/User/Google Диск/my programming/ruby/tests/test/t2.txt"
+
+filenames = [path1, path2]
+
+p conread(filenames)
+
+puts
+
+#require 'socket'
+
+#def handle_client(c)
+#	while true
+#		input = c.gets.chop
+#		break if !input
+#		break if input=="quit"
+#		c.puts(input.reverse)
+#		c.flush
+#	end
+#	c.close
+#end
+
+#server = TCPServer.open(2000)
+
+#while true
+#	client = server.accept
+#	Thread.start(client) do |c|
+#		handle_client(c)
+#	end
+#end
+
+puts
+p "PART 9.9.6.3 PAGE 457" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+

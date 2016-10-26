@@ -1,9 +1,4 @@
-T1
-INFO: Logging a message
-INFO: Logging a message
-INFO: Logging a message
-INFO: Logging a message
-INFO: Logging a message
+T2
 INFO: Logging a message
 INFO: Logging a message
 INFO: Logging a message
