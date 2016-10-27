@@ -1975,3 +1975,32 @@ puts
 p "PART 9.9.6.3 PAGE 457" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+m,n = Mutex.new, Mutex.new
+
+t = Thread.new {
+	m.lock
+	puts "Thread t lock mutex m"
+	sleep 1
+	puts "Thread t wait for lock mutex n"
+	n.lock
+}
+
+s = Thread.new {
+	n.lock
+	puts "Thread s lock mutex n"
+	sleep 1
+	puts "Thread s wait for lock mutex m"
+	m.lock
+}
+
+#t.join
+#s.join
+
+#a = [-2, -1, 0, 1, 2]
+#mapper = lambda {|x| x*x}
+#injector = lambda {|total, x| total + x}
+# a.conject(0, mapper, injector)
+
+puts
+p "PART 10 PAGE 466" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
