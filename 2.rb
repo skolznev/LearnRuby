@@ -2004,3 +2004,9 @@ s = Thread.new {
 puts
 p "PART 10 PAGE 466" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
+
+puts "Bla-bla-bla"
+
+puts
+p "PART 10.2 PAGE 471" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
