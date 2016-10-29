@@ -2010,3 +2010,29 @@ puts "Bla-bla-bla"
 puts
 p "PART 10.2 PAGE 471" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
+
+puts Module.constants.sort.select {|i| eval(i.to_s).instance_of? Module}
+
+puts
+
+puts Module.constants.sort.select { |i|
+	c = eval(i.to_s)
+	c.is_a? Class and not c.ancestors.include? Exception
+}
+
+puts
+
+puts Module.constants.sort.select {|x|
+	c = eval(x.to_s)
+	c.instance_of? Class and c.ancestors.include? Exception
+}
+
+puts
+
+puts Module.constants.sort.reject {|x| eval(x.to_s).is_a? Module}
+
+puts
+
+puts
+p "PART 10.2.3 PAGE 474" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
