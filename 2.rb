@@ -2036,3 +2036,10 @@ puts
 puts
 p "PART 10.2.3 PAGE 474" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
+
+puts global_variables.sort
+
+puts
+p "PART 10.2 PAGE 481" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
+
