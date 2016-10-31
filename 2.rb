@@ -2040,6 +2040,12 @@ puts
 puts global_variables.sort
 
 puts
-p "PART 10.2 PAGE 481" #Флэнаган, Мацумото "Язык программирования Ruby"
+p "PART 10.3 PAGE 481" #Флэнаган, Мацумото "Язык программирования Ruby"
 puts
 
+require 'pp'
+pp h = { :a => 1, :b => 2, :c => 3, :d => 4, :e => 5, :f => 6, :h => 7, :i => 8}
+
+puts
+p "PART 10.4 PAGE 483" #Флэнаган, Мацумото "Язык программирования Ruby"
+puts
