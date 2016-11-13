@@ -112,3 +112,16 @@
 
 # p res
 
+# def cube val, degree=2
+# 	val ** degree
+# end
+
+# p cube 5, 6
+
+# def sum *args
+# 	args.inject :+
+# end
+
+# p sum 1,2,3,4
+
+38:00
