@@ -124,4 +124,38 @@
 
 # p sum 1,2,3,4
 
-38:00
+# ary = [1,2]
+
+# def add ary, val
+# 	ary_clone = ary.clone
+# 	ary_clone.push val
+# end
+
+# p ary
+# p add ary, 7
+# p ary
+
+# class Point
+
+# 	def initialize x, y
+# 		p x, y
+# 	end
+
+# 	def hello
+# 		puts "Hello, Ruby!"
+# 	end
+
+# end
+
+# point = Point.new 1, 10
+# point.hello
+
+# point = Point.new
+# point2 = Point.new
+
+# p point.__id__
+# p point2.__id__
+
+# p point.class
+
+1.01.50
