@@ -138,17 +138,35 @@
 # class Point
 
 # 	def initialize x, y
-# 		p x, y
+# 		@x = x #переменные экземпляра
+# 		@y = y
 # 	end
 
 # 	def hello
-# 		puts "Hello, Ruby!"
+# 		puts "Hello, Ruby! I'm point: x = #{@x}, y = #{@y}"
 # 	end
 
-# end
+# 	def to_s #для вывода puts
+# 		"Point: (#{@x};#{@y})"
+# 	end
 
-# point = Point.new 1, 10
-# point.hello
+# 	def inspect #для вывода p
+# 		"Point: (#{@x};#{@y};id:<#{object_id}>)"
+# 	end
+
+# 	def x
+# 		@x
+# 	end
+
+# 	def x= val
+# 		@x = val
+# 	end
+# end
+# point = Point.new 25, 110
+# p point
+# puts point
+# point.x = 0
+# p point.x
 
 # point = Point.new
 # point2 = Point.new
@@ -158,4 +176,34 @@
 
 # p point.class
 
-1.01.50
+# class Point
+
+# 	attr_accessor :x, :y
+# 	attr_reader :x, :y
+# 	attr_writer :x, :y
+
+# 	def initialize x, y
+# 		@x = x #переменные экземпляра
+# 		@y = y
+# 	end
+
+# 	def hello
+# 		puts "Hello, Ruby! I'm point: x = #{@x}, y = #{@y}"
+# 	end
+
+# 	def to_s #для вывода puts
+# 		"Point: (#{@x};#{@y})"
+# 	end
+
+# 	def inspect #для вывода p
+# 		"Point: (#{@x};#{@y};id:<#{object_id}>)"
+# 	end
+
+# end
+# point = Point.new 25, 110
+# p point
+# puts point
+# point.x = 0
+# p point.x
+
+1,19,45
