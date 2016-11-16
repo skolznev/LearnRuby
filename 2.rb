@@ -179,12 +179,14 @@
 # class Point
 
 # 	attr_accessor :x, :y
-# 	attr_reader :x, :y
-# 	attr_writer :x, :y
+# 	# # attr_reader :x, :y
+# 	# # attr_writer :x, :y
 
 # 	def initialize x, y
+# 		p self
 # 		@x = x #переменные экземпляра
 # 		@y = y
+# 		@z = 100
 # 	end
 
 # 	def hello
@@ -192,6 +194,7 @@
 # 	end
 
 # 	def to_s #для вывода puts
+# 		p self
 # 		"Point: (#{@x};#{@y})"
 # 	end
 
@@ -200,10 +203,11 @@
 # 	end
 
 # end
+
 # point = Point.new 25, 110
 # p point
 # puts point
 # point.x = 0
 # p point.x
 
-1,19,45
+# 1.43.35
