@@ -210,4 +210,35 @@
 # point.x = 0
 # p point.x
 
-# 1.43.35
+# 
+
+
+class Lift
+
+	def initialize
+		@current_flore = 1
+		@weight = 0
+	end
+
+	def move floor
+		if floor > @current_flore
+			up floor
+		else
+			down floor
+		end
+		set_current_floor! floor
+		puts "Stop. You are on the #{current_flore} floor"
+
+	end
+
+	def to_s
+
+	end
+
+end
+
+lift = Lift.new
+
+lift.move 7
+
+#2.04.38
