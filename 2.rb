@@ -238,6 +238,16 @@ class Lift
 
 	end
 
+	def load! weight
+		@weight += weight
+		puts "[Load]: current weight is #{@weight}"
+	end
+
+	def release! weight
+		@weight -= weight
+		puts "[Release]: current weight is #{@weight}"
+	end
+
 	def to_s
 		"Lift with load #{@weight}kg on the #{@current_flore} floor"
 	end
@@ -271,6 +281,11 @@ class Lift
 end
 
 lift = Lift.new
+
+lift.load! 40
+lift.load! 140
+lift.load! 100
+lift.release! 100
 
 lift.move 7
 lift.move 2
