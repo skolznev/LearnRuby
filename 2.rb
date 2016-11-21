@@ -213,81 +213,82 @@
 # 
 
 
-class Lift
+# class Lift
 
-	MAX_WEIGHT = 250
-	FLOOR_RANGE = 1..25
+# 	MAX_WEIGHT = 250
+# 	FLOOR_RANGE = 1..25
 
-	#Интерфейс
-	def initialize
-		@current_flore = 1
-		@weight = 0
-	end
+# 	#Интерфейс
+# 	def initialize
+# 		@current_flore = 1
+# 		@weight = 0
+# 	end
 
-	def move floor
-		return puts("Mistake! Not found floor!") unless floor.instance_of?(Fixnum) && FLOOR_RANGE.cover?(floor)
-		return puts("Weight (#{@weight}kg) is more then allowed (#{MAX_WEIGHT}kg)") unless allowed_weight? #за исключением
-		return puts("You are already on the #{floor}") if @current_flore == floor
-		if floor > @current_flore
-			up floor
-		else
-			down floor
-		end
-		set_current_floor! floor
-		puts "Stop. You are on the #{@current_flore} floor"
+# 	def move floor
+# 		return puts("Mistake! Not found floor!") unless floor.instance_of?(Fixnum) && FLOOR_RANGE.cover?(floor)
+# 		return puts("Weight (#{@weight}kg) is more then allowed (#{MAX_WEIGHT}kg)") unless allowed_weight? #за исключением
+# 		return puts("You are already on the #{floor}") if @current_flore == floor
+# 		if floor > @current_flore
+# 			up floor
+# 		else
+# 			down floor
+# 		end
+# 		set_current_floor! floor
+# 		puts "Stop. You are on the #{@current_flore} floor"
 
-	end
+# 	end
 
-	def load! weight
-		@weight += weight
-		puts "[Load]: current weight is #{@weight}"
-	end
+# 	def load! weight
+# 		@weight += weight
+# 		puts "[Load]: current weight is #{@weight}"
+# 	end
 
-	def release! weight
-		@weight -= weight
-		puts "[Release]: current weight is #{@weight}"
-	end
+# 	def release! weight
+# 		@weight -= weight
+# 		puts "[Release]: current weight is #{@weight}"
+# 	end
 
-	def to_s
-		"Lift with load #{@weight}kg on the #{@current_flore} floor"
-	end
+# 	def to_s
+# 		"Lift with load #{@weight}kg on the #{@current_flore} floor"
+# 	end
 
 
-	#Реализация
-	private
+# 	#Реализация
+# 	private
 
-	def allowed_weight?
-		@weight <= MAX_WEIGHT
-	end
+# 	def allowed_weight?
+# 		@weight <= MAX_WEIGHT
+# 	end
 
-	def up floor
-		puts "Moving up..."
-		@current_flore.upto(floor) do |i|
-			puts "#{i} floor"
-		end
-	end
+# 	def up floor
+# 		puts "Moving up..."
+# 		@current_flore.upto(floor) do |i|
+# 			puts "#{i} floor"
+# 		end
+# 	end
 
-	def down floor
-		puts "Moving down..."
-		@current_flore.downto(floor) do |i|
-			puts "#{i} floor"
-		end
-	end
+# 	def down floor
+# 		puts "Moving down..."
+# 		@current_flore.downto(floor) do |i|
+# 			puts "#{i} floor"
+# 		end
+# 	end
 
-	def set_current_floor! floor
-		@current_flore = floor
-	end
+# 	def set_current_floor! floor
+# 		@current_flore = floor
+# 	end
 
-end
+# end
 
-lift = Lift.new
+# lift = Lift.new
 
-lift.load! 40
-lift.load! 140
-lift.load! 100
-lift.release! 100
+# lift.load! 40
+# lift.load! 140
+# lift.load! 100
+# lift.release! 100
 
-lift.move 7
-lift.move 2
+# lift.move 7
+# lift.move 2
 
-#2.13.07
+
+# ex 4, time: 20.22
