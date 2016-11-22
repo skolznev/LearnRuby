@@ -291,4 +291,4 @@
 # lift.move 2
 
 
-# ex 4, time: 20.22
+# ex 4, time: 35.35
