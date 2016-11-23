@@ -290,5 +290,21 @@
 # lift.move 7
 # lift.move 2
 
+class Module
 
-# ex 4, time: 35.35
+	def module?
+		self.class == Module
+	end
+
+end
+
+module Warp
+end
+
+class Ship
+end
+
+puts Ship.module?
+puts Warp.module?
+
+# ex 4, time: 52.30
