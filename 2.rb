@@ -219,24 +219,24 @@ class Lift
 	FLOOR_RANGE = 1..25
 
 	#Интерфейс
-	def initialize
-		@current_flore = 1
-		@weight = 0
-	end
+	# def initialize
+	# 	@current_flore = 1
+	# 	@weight = 0
+	# end
  
-	def move floor
-		return puts("Mistake! Not found floor!") unless floor.instance_of?(Fixnum) && FLOOR_RANGE.cover?(floor)
-		return puts("Weight (#{@weight}kg) is more then allowed (#{MAX_WEIGHT}kg)") unless allowed_weight? #за исключением
-		return puts("You are already on the #{floor}") if @current_flore == floor
-		if floor > @current_flore
-			up floor
-		else
-			down floor
-		end
-		set_current_floor! floor
-		puts "Stop. You are on the #{@current_flore} floor"
+	# def move floor
+	# 	return puts("Mistake! Not found floor!") unless floor.instance_of?(Fixnum) && FLOOR_RANGE.cover?(floor)
+	# 	return puts("Weight (#{@weight}kg) is more then allowed (#{MAX_WEIGHT}kg)") unless allowed_weight? #за исключением
+	# 	return puts("You are already on the #{floor}") if @current_flore == floor
+	# 	if floor > @current_flore
+	# 		up floor
+	# 	else
+	# 		down floor
+	# 	end
+	# 	set_current_floor! floor
+	# 	puts "Stop. You are on the #{@current_flore} floor"
 
-	end
+	# end
 
 	def load! weight
 		@weight += weight
@@ -307,4 +307,4 @@ end
 # puts Ship.module?
 # puts Warp.module?
 
-# ex 4, time: 1.11.42
+# ex 4, time: 1.28.17
