@@ -4,16 +4,31 @@ module Lift
 	MAX_WEIGHT = 250
 	FLOOR_RANGE = 1..25
 
-		def valid? *args
+	attr_reader :error
 
+		def valid? *args
+			clear_error!
+
+			args.each do |validator_name|
+				self.send "check_#{validator_name}!"
+			end
+
+			@error.nil? ? true : false
 		end
+
+		def clear_error!
+			@error = nil
+		end
+
+
+		private
 
 		def check_floor_range!
-			@error = "Mistake! Not found floor!" unless floor.instance_of?(Fixnum) && FLOOR_RANGE.cover?(floor)
+			@error = "Mistake! Not found floor!" unless @engine.floor.instance_of?(Fixnum) && FLOOR_RANGE === @engine.floor
 		end
 
-		def check_floor_curren!
-			@error = "You are already on the #{floor}" if @current_flore == floor
+		def check_floor_current!
+			@error = "You are already on the #{@engine.floor}" if @engine.current_flore == @engine.floor
 		end
 
 		def check_weight!

@@ -21,10 +21,11 @@ lift = Lift.create
 
 # lift = Lift.load! 40
 
-lift.load! 40
+lift.load! 50
 lift.load! 140
-lift.load! 100
+# lift.load! 100
 lift.release! 100
 # puts Lift.version
+lift.move 7
 lift.move 7
 # lift.move 2
