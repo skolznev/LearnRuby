@@ -22,8 +22,8 @@ module Lift
 		end
 
 		def load! weight
-		@weight += weight
-		puts "[Load]: current weight is #{@weight}"
+			@weight += weight
+			puts "[Load]: current weight is #{@weight}"
 		end
 
 		def release! weight

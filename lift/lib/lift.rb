@@ -23,9 +23,9 @@ lift = Lift.create
 
 lift.load! 50
 lift.load! 140
-# lift.load! 100
+lift.load! 100
 lift.release! 100
-# puts Lift.version
+puts Lift.version
 lift.move 7
 lift.move 7
-# lift.move 2
+lift.move 2

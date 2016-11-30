@@ -213,10 +213,10 @@
 # 
 
 
-class Lift
+# class Lift
 
-	MAX_WEIGHT = 250
-	FLOOR_RANGE = 1..25
+# 	MAX_WEIGHT = 250
+# 	FLOOR_RANGE = 1..25
 
 	#Интерфейс
 	# def initialize
@@ -238,47 +238,47 @@ class Lift
 
 	# end
 
-	def load! weight
-		@weight += weight
-		puts "[Load]: current weight is #{@weight}"
-	end
+# 	def load! weight
+# 		@weight += weight
+# 		puts "[Load]: current weight is #{@weight}"
+# 	end
 
-	def release! weight
-		@weight -= weight
-		puts "[Release]: current weight is #{@weight}"
-	end
+# 	def release! weight
+# 		@weight -= weight
+# 		puts "[Release]: current weight is #{@weight}"
+# 	end
 
-	def to_s
-		"Lift with load #{@weight}kg on the #{@current_flore} floor"
-	end
+# 	def to_s
+# 		"Lift with load #{@weight}kg on the #{@current_flore} floor"
+# 	end
 
 
-	#Реализация
-	private
+# 	#Реализация
+# 	private
 
-	def allowed_weight?
-		@weight <= MAX_WEIGHT
-	end
+# 	def allowed_weight?
+# 		@weight <= MAX_WEIGHT
+# 	end
 
-	def up floor
-		puts "Moving up..."
-		@current_flore.upto(floor) do |i|
-			puts "#{i} floor"
-		end
-	end
+# 	def up floor
+# 		puts "Moving up..."
+# 		@current_flore.upto(floor) do |i|
+# 			puts "#{i} floor"
+# 		end
+# 	end
 
-	def down floor
-		puts "Moving down..."
-		@current_flore.downto(floor) do |i|
-			puts "#{i} floor"
-		end
-	end
+# 	def down floor
+# 		puts "Moving down..."
+# 		@current_flore.downto(floor) do |i|
+# 			puts "#{i} floor"
+# 		end
+# 	end
 
-	def set_current_floor! floor
-		@current_flore = floor
-	end
+# 	def set_current_floor! floor
+# 		@current_flore = floor
+# 	end
 
-end
+# end
 
 # lift = Lift.new
 
@@ -308,3 +308,20 @@ end
 # puts Warp.module?
 
 # ex 4, time: 1.44.10
+
+
+# def operation
+# 	yield "Hello, block from operation" # произвести вычисление блока
+# end
+
+def operation &block
+	block.call "Hello, block from operation"
+end
+
+operation do |text = nil|
+	p text	
+end
+
+# operation { 1 + 1 }
+
+# ex 4, time: 2.09.50
