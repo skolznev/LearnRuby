@@ -314,14 +314,17 @@
 # 	yield "Hello, block from operation" # произвести вычисление блока
 # end
 
-def operation &block
-	block.call "Hello, block from operation"
-end
+# def operation &blk
+# 	# block.call "Hello, block from operation"
+# 	p blk.class
+# end
 
-operation do |text = nil|
-	p text	
-end
+# operation do |text = nil|
+# 	p text	
+# end
 
 # operation { 1 + 1 }
 
-# ex 4, time: 2.09.50
+
+
+# ex 5, time: 0.13.40
