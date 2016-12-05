@@ -326,5 +326,30 @@
 # operation { 1 + 1 }
 
 
+# catch :a do
+# 	1+1
+# 	# throw :a
+# 	puts "1"
+# end
 
-# ex 5, time: 0.40.00
+# puts "2"
+
+
+# begin
+# 	1 / 0
+# 	# hey!
+# 	require 'hz'
+# # rescue ZeroDivisionError
+# # 	p "zero"
+# # rescue LoadError
+# # 	p "no lib"
+# rescue Exception
+# 	p "Exception"
+# end
+
+# result = 1 / 0 rescue nil
+# p result
+
+# "Рескью нил, рескью нил, мою жизнь он изменил )))"
+
+# ex 5, time: 1.01.00
