@@ -352,4 +352,31 @@
 
 # "Рескью нил, рескью нил, мою жизнь он изменил )))"
 
-# ex 5, time: 1.01.00
+# def warp!
+# 	1 / 0
+# rescue => error 
+# 	p "Ups", error.message
+# end
+# warp!
+
+class Ship
+
+	class NotEnoughFluelError < StandardError
+
+	end
+
+	def initialize fuel
+		@fuel = fuel
+	end
+
+	def warp_jump
+		# # puts "I can't do warp jump! I need more fuel!"
+		# raise NotEnoughFluelError, "Not enough fuel" if @fuel < 200
+		# puts "It's OK! Warp jump complite!"
+	end
+
+end
+
+Ship.new(0).warp_jump
+
+# ex 5, time: 1.21.27
