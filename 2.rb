@@ -359,24 +359,26 @@
 # end
 # warp!
 
-class Ship
+# class Ship
 
-	class NotEnoughFluelError < StandardError
+# 	class NotEnoughFluelError < StandardError
 
-	end
+# 	end
 
-	def initialize fuel
-		@fuel = fuel
-	end
+# 	def initialize fuel
+# 		@fuel = fuel
+# 	end
 
-	def warp_jump
-		# # puts "I can't do warp jump! I need more fuel!"
-		# raise NotEnoughFluelError, "Not enough fuel" if @fuel < 200
-		# puts "It's OK! Warp jump complite!"
-	end
+# 	def warp_jump
+# 		# # puts "I can't do warp jump! I need more fuel!"
+# 		# raise NotEnoughFluelError, "Not enough fuel" if @fuel < 200
+# 		# puts "It's OK! Warp jump complite!"
+# 	end
 
-end
+# end
 
-Ship.new(0).warp_jump
+# Ship.new(0).warp_jump
 
-# ex 5, time: 1.21.27
+
+
+# ex 5, time: 1.46.06
