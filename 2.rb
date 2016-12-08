@@ -379,6 +379,17 @@
 
 # Ship.new(0).warp_jump
 
+require 'net/http'
 
+class RunningTrack
 
-# ex 5, time: 1.46.06
+	DATA_URL = "http://www.virtualsoccer.ru/viewmatch.php?day=12557&match_id=181106"
+
+	def self.import
+		Net::HTTP.get "virtualsoccer.ru", '/viewmatch.php?day=12557&match_id=181106'
+	end
+
+end
+
+puts RunningTrack.import
+# ex 5, time: 1.55.31
