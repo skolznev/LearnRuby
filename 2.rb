@@ -379,17 +379,35 @@
 
 # Ship.new(0).warp_jump
 
-require 'net/http'
+# require 'net/http'
+# require 'open-uri'
 
-class RunningTrack
+# class RunningTrack
 
-	DATA_URL = "http://www.virtualsoccer.ru/viewmatch.php?day=12557&match_id=181106"
+# 	DATA_URL = "http://www.virtualsoccer.ru/viewmatch.php?day=12557&match_id=181106"
 
-	def self.import
-		Net::HTTP.get "virtualsoccer.ru", '/viewmatch.php?day=12557&match_id=181106'
-	end
+# 	def self.import
+# # 		# Net::HTTP.get "virtualsoccer.ru", '/viewmatch.php?day=12557&match_id=181106'
+# # 		uri = URI(DATA_URL)
+# # 		Net::HTTP.get uri
+		
+# 		open(DATA_URL).each_line do |line|
+# 			puts line
+# 		end
+# 	end
 
-end
+# 	def self.import_file
+# 		open 'C:\Users\User\Google Диск\my programming\ruby\tests\92.rb'
+# 	end
 
-puts RunningTrack.import
+# end
+
+# puts RunningTrack.import_file.read
+
+# require 'workflow'
+# class Player
+
+# end
+
+
 # ex 5, time: 1.55.31
