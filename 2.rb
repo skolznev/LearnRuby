@@ -409,5 +409,14 @@
 
 # end
 
+# def output_first_chars *args
+# 	# options = args.extract_options!
+# 	# p args
+# 	args.each do |s|
+# 		puts s[0...3]
+# 	end
+# end
 
-# ex 6, time: 0.06.36
+# output_first_chars "First string", "Second string", length: 3
+
+# ex 6, time: 0.31.50
