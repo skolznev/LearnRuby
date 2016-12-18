@@ -419,4 +419,5 @@
 
 # output_first_chars "First string", "Second string", length: 3
 
-# ex 7, time: 0.0.0
+
+# ex 7, time: 0.01.09
