@@ -420,4 +420,25 @@
 # output_first_chars "First string", "Second string", length: 3
 
 
-# ex 7, time: 0.01.09
+require 'active_support/all'
+class User
+	include ActiveSupport::Configurable
+end
+
+class Player < User
+end
+
+User.config.admin = true
+admin = User.new
+puts admin.config
+
+
+# Player.config.admin = true
+# p User.config.admin
+# p User.config
+
+
+
+
+
+# ex 7, time: 0.24.54
