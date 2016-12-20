@@ -420,25 +420,58 @@
 # output_first_chars "First string", "Second string", length: 3
 
 
-require 'active_support/all'
-class User
-	include ActiveSupport::Configurable
-end
+# require 'active_support/all'
+# class User
+# 	include ActiveSupport::Configurable
+# end
 
-class Player < User
-end
+# class Player < User
+# end
 
-User.config.admin = true
-admin = User.new
-puts admin.config
+# User.config.admin = true
+# admin = User.new
+# puts admin.config
 
 
 # Player.config.admin = true
 # p User.config.admin
 # p User.config
 
+# class Class
+# class Ship
+
+# 	@sname = :battleship #переменная экземпляра класса
+
+# 	attr_reader :sname
+# 	def initialize
+# 		@sname = 'Zeus' #переменная экземпляра
+# 	end
+
+# 	# def self.sname #свой спец метод для переменной экземпляра класса
+# 	# 	@sname
+# 	# end
+
+# 	class << self
+# 		attr_reader :sname
+# 	end
+
+# end
+# # end
+
+# p Ship.new.sname
+# p Ship.sname
 
 
+class Tetragon
 
+	def get_sides
+		@@sides 	#Переменные класса
+	end
 
-# ex 7, time: 0.24.54
+	def self.get_sides
+		@@sides
+	end
+
+end
+
+# ex 7, time: 0.45.50
