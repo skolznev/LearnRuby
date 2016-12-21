@@ -462,16 +462,30 @@
 # p Ship.sname
 
 
-class Tetragon
+# class Tetragon
 
-	def get_sides
-		@@sides 	#Переменные класса
-	end
+# 	@@sides = 4
 
-	def self.get_sides
-		@@sides
-	end
+# 	def get_sides
+# 		@@sides 	#Переменные класса
+# 	end
 
-end
+# 	def self.get_sides
+# 		@@sides
+# 	end
 
-# ex 7, time: 0.45.50
+# end
+
+# class Triangle < Tetragon
+
+# 	def change_sides!
+# 		@@sides = 3
+# 	end
+
+# end
+
+# Triangle.new.change_sides!
+# p Tetragon.new.get_sides
+# p Triangle.get_sides
+
+# ex 7, time: 1.03.52
