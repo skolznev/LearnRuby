@@ -488,4 +488,4 @@
 # p Tetragon.new.get_sides
 # p Triangle.get_sides
 
-# ex 7, time: 1.03.52
+# ex 7, time: 1.27.53
