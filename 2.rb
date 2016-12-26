@@ -490,4 +490,4 @@
 
 
 
-# ex 7, time: 1.59.00 Rake-задачи
+# ex 8, time: 0.0.00 Rails
