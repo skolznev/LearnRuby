@@ -488,6 +488,7 @@
 # p Tetragon.new.get_sides
 # p Triangle.get_sides
 
+require 'rack'
 
 
-# ex 8, time: 0.25.00 Rails
+# ex 8, time: 0.45.16 Rails
