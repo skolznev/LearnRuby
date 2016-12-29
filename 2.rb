@@ -490,5 +490,11 @@
 
 require 'rack'
 
+# app = Proc.new do |env|
+# 	p env
+# 	[ 200, {"Content-Type" => "text/plain"}, [ "Hello, Rack!\n" ] ]
+# end
 
-# ex 8, time: 0.45.16 Rails
+Rack::Handler::WEBrick.run app
+
+# ex 8, time: 01.00.16 Rack
