@@ -495,6 +495,32 @@ require 'rack'
 # 	[ 200, {"Content-Type" => "text/plain"}, [ "Hello, Rack!\n" ] ]
 # end
 
-Rack::Handler::WEBrick.run app
 
-# ex 8, time: 01.00.16 Rack
+class SuperApp
+
+	def initialize
+		puts "Create app"
+	end
+
+	def call env
+		@request = Rack::Request.new env
+		@response = Rack::Response.new
+		p @request.params
+		# [ 200, { "App" => "SuperApp" }, [ "Hello, Rack!\n" ] ]
+		send_response
+	end
+
+	def body
+		"Hey, I'm on Rack!\n"
+	end
+
+	private
+
+	def send_response
+		@response.write body
+		@response.finish
+	end
+end
+
+Rack::Handler::WEBrick.run SuperApp.new
+# ex 8, time: 01.18.03 Rack
