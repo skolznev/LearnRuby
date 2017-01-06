@@ -511,7 +511,20 @@ class SuperApp
 	end
 
 	def body
-		"Hey, I'm on Rack!\n"
+		<<-HTML
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+		<form action="/send_name" method="POST">
+			<input type="text" name="name">
+			<input type="submit" value="Send">
+		</form>
+		</body>
+		</html>
+		HTML
 	end
 
 	private
@@ -522,5 +535,37 @@ class SuperApp
 	end
 end
 
-Rack::Handler::WEBrick.run SuperApp.new
-# ex 8, time: 01.18.03 Rack
+# Rack::Handler::WEBrick.run SuperApp.new
+# builder.run app
+
+class NameController < SuperApp
+
+	def body
+		name = @request.params['name']
+		"Your name is #{name}"
+	end
+
+end
+
+info = Proc.new do |env|
+	[ 200, {}, ["Created and running on Rack.\n"]]
+end
+
+builder = Rack::Builder.new do
+	map '/' do
+		run SuperApp.new
+	end
+
+	map '/send_name' do
+		run NameController.new
+	end
+
+	# map '/info' do
+	# 	run info
+	# end
+end
+
+
+Rack::Handler::WEBrick.run builder
+
+# ex 8, time: 01.34.13 Rack
