@@ -552,11 +552,15 @@ info = Proc.new do |env|
 end
 
 builder = Rack::Builder.new do
+
+	# use Rack::Reloader
+
 	map '/' do
 		run SuperApp.new
 	end
 
 	map '/send_name' do
+		# use Rack::Reloader
 		run NameController.new
 	end
 
@@ -565,7 +569,8 @@ builder = Rack::Builder.new do
 	# end
 end
 
+# builder.use Rack::Reloader
 
 Rack::Handler::WEBrick.run builder
 
-# ex 8, time: 01.34.13 Rack
+# ex 8, time: 01.51.47 Rack
