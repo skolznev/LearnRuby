@@ -573,4 +573,4 @@ end
 
 Rack::Handler::WEBrick.run builder
 
-# ex 8, time: 01.51.47 Rack
+# ex 8, time: 01.56.26 heroku bundle
