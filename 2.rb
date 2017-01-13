@@ -573,4 +573,4 @@ end
 
 Rack::Handler::WEBrick.run builder
 
-# ex 9, time: 00.25.20 диспатчер
+# ex 9, time: 00.25.20 установил рельсы - сломал мозг
