@@ -488,7 +488,7 @@
 # p Tetragon.new.get_sides
 # p Triangle.get_sides
 
-require 'rack'
+=beginrequire 'rack'
 
 # app = Proc.new do |env|
 # 	p env
@@ -571,6 +571,6 @@ end
 
 # builder.use Rack::Reloader
 
-Rack::Handler::WEBrick.run builder
+Rack::Handler::WEBrick.run builder=end
 
-# ex 9, time: 00.25.20 диспатчер
+# ex 9, time: 00.59.00 рельсы
