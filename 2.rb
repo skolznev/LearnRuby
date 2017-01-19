@@ -573,4 +573,4 @@ end
 
 Rack::Handler::WEBrick.run builder=end
 
-# ex 9, time: 01.26.34 рельсы, подъем сервера под виндой - просто кошмар!
+# ex 9, time: 01.46.54 
