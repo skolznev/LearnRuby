@@ -573,4 +573,4 @@ end
 
 Rack::Handler::WEBrick.run builder=end
 
-# ex 10, time: 00.13.46 
+# ex 10, time: 00.30.00 
