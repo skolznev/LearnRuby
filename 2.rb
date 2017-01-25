@@ -573,6 +573,6 @@ end
 
 Rack::Handler::WEBrick.run builder=end
 
-# ex 10, time: 00.45.20 
+# ex 10, time: 01.08.10 
 
 puts `rails -v`
