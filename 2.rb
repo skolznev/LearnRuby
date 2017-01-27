@@ -573,6 +573,6 @@ end
 
 Rack::Handler::WEBrick.run builder=end
 
-# ex 10, time: 01.08.10 
+# ex 10, time: 01.32.01 валидации данных
 
 puts `rails -v`
