@@ -488,7 +488,7 @@
 # p Tetragon.new.get_sides
 # p Triangle.get_sides
 
-=beginrequire 'rack'
+=beginrequire 'rack'=end
 
 # app = Proc.new do |env|
 # 	p env
@@ -496,7 +496,7 @@
 # end
 
 
-class SuperApp
+=beginclass SuperApp
 
 	def initialize
 		puts "Create app"
@@ -533,21 +533,21 @@ class SuperApp
 		@response.write body
 		@response.finish
 	end
-end
+end=end
 
 # Rack::Handler::WEBrick.run SuperApp.new
 # builder.run app
 
-class NameController < SuperApp
+=beginclass NameController < SuperApp
 
 	def body
 		name = @request.params['name']
 		"Your name is #{name}"
 	end
 
-end
+end=end
 
-info = Proc.new do |env|
+=begininfo = Proc.new do |env|
 	[ 200, {}, ["Created and running on Rack.\n"]]
 end
 
@@ -567,12 +567,14 @@ builder = Rack::Builder.new do
 	# map '/info' do
 	# 	run info
 	# end
-end
+end=end
 
 # builder.use Rack::Reloader
 
-Rack::Handler::WEBrick.run builder=end
+=beginRack::Handler::WEBrick.run builder
 
 # ex 10, time: 01.32.01 валидации данных
 
-puts `rails -v`
+=beginputs `rails -v`=end
+
+#Регулярные выражения
