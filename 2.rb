@@ -573,7 +573,7 @@ end=end
 
 =beginRack::Handler::WEBrick.run builder
 
-# ex 11, time: 01.27.12 валидации данных
+# ex 12, time: 00.12.25 валидации данных
 
 =beginputs `rails -v`=end
 
