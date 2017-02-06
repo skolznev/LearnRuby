@@ -496,85 +496,85 @@
 # end
 
 
-class SuperApp
+# class SuperApp
 
-	def initialize
-		puts "Create app"
-	end
+# 	def initialize
+# 		puts "Create app"
+# 	end
 
-	def call env
-		@request = Rack::Request.new env
-		@response = Rack::Response.new
-		p @request.params
-		# [ 200, { "App" => "SuperApp" }, [ "Hello, Rack!\n" ] ]
-		send_response
-	end
+# 	def call env
+# 		@request = Rack::Request.new env
+# 		@response = Rack::Response.new
+# 		p @request.params
+# 		# [ 200, { "App" => "SuperApp" }, [ "Hello, Rack!\n" ] ]
+# 		send_response
+# 	end
 
-	def body
-		<<-HTML
-		<!DOCTYPE html>
-		<html>
-		<head>
-			<title></title>
-		</head>
-		<body>
-		<form action="/send_name" method="POST">
-			<input type="text" name="name">
-			<input type="submit" value="Send">
-		</form>
-		</body>
-		</html>
-		HTML
-	end
+# 	def body
+# 		<<-HTML
+# 		<!DOCTYPE html>
+# 		<html>
+# 		<head>
+# 			<title></title>
+# 		</head>
+# 		<body>
+# 		<form action="/send_name" method="POST">
+# 			<input type="text" name="name">
+# 			<input type="submit" value="Send">
+# 		</form>
+# 		</body>
+# 		</html>
+# 		HTML
+# 	end
 
-	private
+# 	private
 
-	def send_response
-		@response.write body
-		@response.finish
-	end
-end
+# 	def send_response
+# 		@response.write body
+# 		@response.finish
+# 	end
+# end
 
-# Rack::Handler::WEBrick.run SuperApp.new
-# builder.run app
+# # Rack::Handler::WEBrick.run SuperApp.new
+# # builder.run app
 
-class NameController < SuperApp
+# class NameController < SuperApp
 
-	def body
-		name = @request.params['name']
-		"Your name is #{name}"
-	end
+# 	def body
+# 		name = @request.params['name']
+# 		"Your name is #{name}"
+# 	end
 
-end
+# end
 
-info = Proc.new do |env|
-	[ 200, {}, ["Created and running on Rack.\n"]]
-end
+# info = Proc.new do |env|
+# 	[ 200, {}, ["Created and running on Rack.\n"]]
+# end
 
-builder = Rack::Builder.new do
+# builder = Rack::Builder.new do
 
-	# use Rack::Reloader
+# 	# use Rack::Reloader
 
-	map '/' do
-		run SuperApp.new
-	end
+# 	map '/' do
+# 		run SuperApp.new
+# 	end
 
-	map '/send_name' do
-		# use Rack::Reloader
-		run NameController.new
-	end
+# 	map '/send_name' do
+# 		# use Rack::Reloader
+# 		run NameController.new
+# 	end
 
-	# map '/info' do
-	# 	run info
-	# end
-end
+# 	# map '/info' do
+# 	# 	run info
+# 	# end
+# end
 
-# builder.use Rack::Reloader
+# # builder.use Rack::Reloader
 
-Rack::Handler::WEBrick.run builder
+# Rack::Handler::WEBrick.run builder
 
-# ex 12, time: 00.32.27 валидации данных
+# # ex 12, time: 00.51.05 валидации данных
 
-puts `rails -v`
+# puts `rails -v`
 
 #Регулярные выражения
