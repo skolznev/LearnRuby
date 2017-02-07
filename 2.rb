@@ -573,7 +573,7 @@
 
 # Rack::Handler::WEBrick.run builder
 
-# # ex 12, time: 00.51.05 валидации данных
+# # ex 12, time: 01.09.50 валидации данных
 
 # puts `rails -v`
 
