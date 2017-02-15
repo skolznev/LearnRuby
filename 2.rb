@@ -573,7 +573,7 @@
 
 # Rack::Handler::WEBrick.run builder
 
-# # ex 14, time: 00.00.00 локализация данных
+# # ex 14, time: 00.18.18 хэлперы
 
 # puts `rails -v`
 
