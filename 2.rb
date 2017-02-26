@@ -1,2 +1,2 @@
 GeekBrains 2017
-lesson 6. off
+lesson 7. 41:30
